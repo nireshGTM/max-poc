@@ -4,8 +4,9 @@ import bcrypt from 'bcryptjs';
 const RoleData = ["Admin", "Executive"];
 const CategoryData = ["House/Villa", "Appartments", "Hotels", "Restaurents", "Educational Institution", "INdustry/Factory", "Indoor Auditorium", "Commercial building"];
 const DesignationData = ["Chief Engineer", "Trainee", "Manager", "Senior Executive"];
+const EngineerData = [{engineer_name:"Max",email:"max@mailinator.com"}];
 
-const InitialDataInsert = ({User, Role, Category, Designation}) => {
+const InitialDataInsert = ({User, Role, Category, Engineer, Designation}) => {
 
     Role.estimatedDocumentCount((err, count) => {
         if(count===0 && !err)
@@ -32,7 +33,7 @@ const InitialDataInsert = ({User, Role, Category, Designation}) => {
                                 role : role._id,
                                 status: 1
                             }).save().then(()=>{
-                                console.log(`Admin User Created`);
+                                console.log(`Admin User Created : niresh@mailinator.com/password`);
                             }).catch((e)=>{
                                 console.log(`Admin User Not Created`);
                                 console.log(e);
@@ -61,7 +62,16 @@ const InitialDataInsert = ({User, Role, Category, Designation}) => {
             }).save();
         });
     });
-    
+
+    Engineer.estimatedDocumentCount((err, count) => {
+        if(count===0 && !err)
+        EngineerData.map((item)=>{
+            new Engineer({
+                engineer_name: item.engineer_name,
+                email:item.email
+            }).save();
+        });
+    });    
 }
 
 module.exports = InitialDataInsert;

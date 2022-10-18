@@ -206,7 +206,7 @@ const Project = (props) => {
                 <FormError formErrors={formErrors} element="start_date"/>
               </Form.Item>
               <Form.Item label="Due Date">
-                <DatePicker value={(projectFormData.start_date) && moment(projectFormData.due_date)} onChange={date => projectFormChange('due_date', date)} />
+                <DatePicker value={(projectFormData.due_date) && moment(projectFormData.due_date)} onChange={date => projectFormChange('due_date', date)} />
                 <FormError formErrors={formErrors} element="due_date"/>
               </Form.Item>
 
