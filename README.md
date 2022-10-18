@@ -23,5 +23,13 @@ Client:
 2. 'npm start' to start the application. Runs default in "http://localhost:3000"
 
 
+Note:
+
+-DB will be created and only basic DB records will be created on starting the server for first time 'npm run start:dev'.
+-Admin user will be created. 'niresh@mailinator.com/password'
+-One staff record will be created along project categories 
+-Projects will be empty.
+
+
 
 
