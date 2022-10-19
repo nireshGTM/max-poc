@@ -9,7 +9,7 @@ Server:
 
 
 	#MONGODB
-	DBNAME = 'smf-poc'
+	DBNAME = 'max-poc'
 	DBHOST = 'localhost'
 	DBPORT = '27017'
 
