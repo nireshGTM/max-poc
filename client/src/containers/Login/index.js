@@ -28,7 +28,7 @@ const Login = (props) => {
       <div className="form-group">
         <input
           type="email"
-          className="form-control"
+          className="ant-input"
           name="username"
           value={loginFormData.username}  onChange={e => loginChange(e.target.name, e.target.value)}
           placeholder="Your email"
@@ -36,7 +36,7 @@ const Login = (props) => {
         />
         <FormError formErrors={formErrors} element="username"/>
       </div>
-
+      <p> </p>
       <div className="form-group">
         <input
           type="password"
